@@ -1,0 +1,20 @@
+package ac1_pokemon_top;
+
+public class AC1_Pokemon_TOP {
+      public static void main(String[] args) {
+        Pokemon meuPokemon = new Pokemon("Charmander", "Fogo", 80);
+        Pokemon outroPokemon = new Pokemon("Squirtle", "Agua", 35);
+        
+        Batalhas batalha1 = new Batalhas();
+               
+        System.out.println("Seu Pokémon: ");
+        meuPokemon.imprimiPokemon();
+        System.out.println("Pokémon Inimigo: ");
+        outroPokemon.imprimiPokemon();
+        
+        batalha1.meuPokemon(meuPokemon.getNome(),meuPokemon.getVida());
+        batalha1.outroPokemon(outroPokemon.getNome(),outroPokemon.getVida());
+        
+        batalha1.startBattle();               
+  }
+}
